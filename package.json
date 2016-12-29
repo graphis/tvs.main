@@ -1,0 +1,33 @@
+{
+  "name": "tvs.main",
+  "version": "1.0.0",
+  "description": "web portfolio of Travis Vander Sloot",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-rev": "^7.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tvsloot/tvs.main.git"
+  },
+  "author": {
+    "name" : "Travis Vander Sloot",
+    "email" : "travis@tvsloot.com",
+    "url" : "http://tvsloot.com/"
+  },
+  "license": "AGPL",
+  "bugs": {
+    "url": "https://github.com/tvsloot/tvs.main/issues"
+  },
+  "homepage": "https://github.com/tvsloot/tvs.main"
+}

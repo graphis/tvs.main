@@ -1,0 +1,19 @@
+{
+    "name": "tvs_main",
+    "authors": [
+        "travis vander sloot <travis@tvsloot.com>"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "web/assets/bower",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "font-awesome": "~4.7",
+        "photoswipe": "~4.1"
+    }
+}
