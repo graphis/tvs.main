@@ -1,0 +1,363 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600');
+
+/* globals */
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html,
+body {
+    min-height: 100%;
+}
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #fff;;
+    color: #000;
+    border-right: 70px solid #000;
+}
+#wrapper {
+    position: relative;
+}
+main {
+    display: block;
+    padding: 30px 15px;
+}
+section {
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+abbr {cursor: help;}
+
+h1,
+h2,
+p {
+    margin-bottom: 15px;
+}
+h1,
+h2,
+strong {
+    font-weight: 600;
+}
+h1 {
+    text-transform: uppercase;
+}
+.caption {
+    font-size: 0.65em;
+    color: #5c5c5c;
+}
+
+a {
+    color: #e31515;
+    text-decoration: none !important;
+    border-bottom: 0.15em solid transparent;
+}
+a:hover,
+a:focus {
+    color: #e31515;
+    border-color: #e31515;
+}
+a:focus {
+    outline: 1px solid #e31515;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.btn-block {
+    display: inline-block;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.65em;
+    line-height: 1.4;
+    font-weight: 600;
+    text-align: left;
+    color: #e31515;
+    border: 0.15em solid #e31515;
+    background-image:none;
+    background-color:transparent;
+    box-shadow: none;
+    margin: 0 15px 15px 0;
+    padding: 0 0.25em;
+    outline: none !important;
+    cursor: pointer;
+}
+.btn-block:hover,
+.btn-block:focus {
+    background: #e31515;
+    color: #fff;
+}
+.btn-block:before {
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    width: 26px;
+    color: #000;
+}
+.btn-block:hover:before,
+.btn-block:focus:before {
+    color: #fff;
+}
+.btn-gallery:before {
+    content: "\f03e";
+}
+.btn-external:before {
+    content: "\f08e";
+}
+.btn-back:before {
+    content: "\f0a5";
+}
+
+.gif-block {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* navigation */
+
+#sidebar {
+    position: fixed;
+    width: 70px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 30px 15px;
+    background: #000;
+}
+#skiptocontent a {
+    position: absolute;
+    top:-100px;
+    left:0px;
+}
+#skiptocontent a:focus {
+    top:0px;
+}
+.navbar-toggle {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 3em;
+    height: 2em;
+    font-size: 11px;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    background-color: transparent;
+}
+.navbar-toggle:focus {
+    outline: #ec2e2e;
+}
+.navbar-toggle span {
+    display: block;
+    position: absolute;
+    top: 0.85em;
+    left: 0;
+    right: 0;
+    height: 0.35em;
+    background: #fff;
+}
+.navbar-toggle span::before,
+.navbar-toggle span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 0.35em;
+    background: #fff;
+    content: "";
+    transition-duration: 0.2s, 0.2s;
+    transition-delay: 0.2s, 0s;
+}
+.navbar-toggle:hover span,
+.navbar-toggle:focus span,
+.navbar-toggle:hover span::before,
+.navbar-toggle:focus span::before,
+.navbar-toggle:hover span::after,
+.navbar-toggle:focus span::after{
+    background: #ec2e2e;
+}
+.navbar-toggle span::before {
+    top: -0.75em;
+    transition-property: top, transform;
+}
+.navbar-toggle span::after {
+    bottom: -0.7em;
+    transition-property: bottom, transform;
+}
+.navbar-toggle.active span {
+    background: none;
+}
+.navbar-toggle.active span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+.navbar-toggle.active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+.navbar-toggle.active span::before,
+.navbar-toggle.active span::after {
+    transition-delay: 0s, 0.2s;
+}
+
+.nav {
+    text-align: right;
+}
+.nav>li {
+    display: inline-block;
+    margin: 0 0 0 1.5em;
+}
+.nav>li>a {
+    font-size: 1.75em;
+    font-weight: 600;
+    line-height: 1;
+}
+.nav>li.active>a {
+    border-color: #ec2e2e;
+}
+
+.social>li>a {
+    color: #fff;
+    border: none !important;
+}
+.social>li>a:hover,
+.social>li>a:focus {
+    color: #ec2e2e;
+    outline: none;
+}
+.social>li>a>span {
+    @extend .sr-only;
+}
+.social>li>a:before {
+    font-family: 'FontAwesome';
+    font-size: 38.5px;
+    font-weight: normal;
+}
+.social>li.github>a:before {
+    content: "\f09b";
+}
+.social>li.linkedin>a:before {
+    content: "\f08c";
+}
+.social>li.email>a:before {
+    content: "\f003";
+    font-size: 33px;
+}
+
+/* js menu */
+
+.js .masthead {
+    margin: 0;
+}
+.js .menu {
+    position: fixed;
+    overflow: auto;
+    width: 80%;
+    width: calc(100% - 70px);
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    z-index: 700;
+    background: #5c5c5c;
+    border-right: 5px solid #fff;
+    transition: left 0.4s;
+}
+.js .menu.collapsed {
+    left: -100%;
+    visibility: hidden;
+}
+.js .nav>li {
+    display: block;
+    margin: -0.25em 0 2.1em;
+}
+.js .nav>li>a {
+    color: #fff;
+}
+.js .navbar-toggle {
+    display: inline-block;
+}
+
+
+/* projects */
+
+#projects {
+    max-width: 800px;
+}
+#projects>a {
+    position: relative;
+    display: block;
+    font-size: 0.65em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border: none !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .35);
+}
+#projects>a:hover,
+#projects>a:focus {
+    top: -3px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .25);
+}
+#projects>a>img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#projects>a>span {
+    display: block;
+    line-height: 1.2;
+    padding: 0.5em;
+    background: #5c5c5c;
+    color: #fff;
+}
+
+@media (min-width: 600px) {
+    #projects {
+        overflow: auto;
+        padding-top: 5px;
+    }
+    #projects>a {
+        width: 40%;
+        width: calc(50% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        float: left;
+    }
+    #projects>a>span {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: none;
+    }
+    #projects>a:hover>span,
+    #projects>a:focus>span {
+        display: block;
+    }
+}

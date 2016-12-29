@@ -1,0 +1,18 @@
+{
+    "name": "tvs/tvs.main",
+    "description": "web portfolio",
+    "type": "project",
+    "authors": [
+        {
+            "name": "travis vander sloot",
+            "email": "travis@tvsloot.com"
+        }
+    ],
+    "require": {
+        "jnjxp/viewd": "^0.1.0",
+        "relay/relay": "^0.2.0",
+        "relay/middleware": "^0.1.0",
+        "aura/html": "2.x-dev",
+        "zendframework/zend-diactoros": "^1.1"
+    }
+}
