@@ -29,7 +29,7 @@ body {
 }
 main {
     display: block;
-    padding: 30px 15px;
+    padding: 95px 15px 30px;
 }
 section {
     max-width: 600px;
@@ -150,6 +150,15 @@ a:focus {
 }
 #skiptocontent a:focus {
     top:0px;
+}
+#brand {
+    position: absolute;
+    display: block;
+    width: 33px;
+    height: 33px;
+    top: 30px;
+    left: 15px;
+    border-bottom: none;
 }
 .navbar-toggle {
     display: none;
@@ -337,6 +346,9 @@ a:focus {
     color: #fff;
 }
 
+
+/* media queries */
+
 @media (min-width: 600px) {
     #projects {
         overflow: auto;
@@ -359,5 +371,17 @@ a:focus {
     #projects>a:hover>span,
     #projects>a:focus>span {
         display: block;
+    }
+}
+
+@media (min-width: 740px) {
+    #brand {
+        position: fixed;
+    }
+    body {
+        border-left: 50px solid transparent;
+    }
+    main {
+        padding-top: 24px;
     }
 }

@@ -22,6 +22,9 @@ foreach ($items as $text => $url) {
         <a href="#maincontent" class="btn-block">skip to main content</a>
     </div>
     <nav id="navigation">
+        <a id="brand" href="/">
+            <img src="/img/tvsloot.png" alt="t logo" />
+        </a>
         <div id="sidebar">
             <button id="navToggle" class="navbar-toggle">
                 <span>toggle menu</span>
