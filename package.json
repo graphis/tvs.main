@@ -1,6 +1,6 @@
 {
   "name": "tvs.main",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "web portfolio of Travis Vander Sloot",
   "main": "gulpfile.js",
   "directories": {
